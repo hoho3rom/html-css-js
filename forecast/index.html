@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Weather Forecast</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="setting">
+                <input class="bg-button" type="button" value='&#128472;'>
+                <select class="lng-selector" type="text">
+                    <option class="lng-selector__option" value="en">EN</option>
+                    <option class="lng-selector__option" value="ru">RU</option>
+                    <option class="lng-selector__option" value="be">UA</option>
+                </select>
+                <div class="temp-units">
+                    <input class="temp-units__radio" type="radio" name="temp" id="C" value="C" checked label="°C">
+                    <input class="temp-units__radio" type="radio" name="temp" id="F" value="F" label="°F">
+                </div>
+            </div>
+
+            <div class="search">
+                <input class="search__input" type="text" placeholder="Search city">
+                <button class="search__button" type="submit">
+                    <span class="button-name">SEARCH</span>
+                </button>
+            </div>
+
+        </header>
+
+        <main class="main">
+            <section class="content">
+
+                <div class="current">
+                    <p class="current__place">MINSK, BELARUS</p>
+                    <p class="current__date">Mon 28 October 17:23:12</p>
+                    <span class="current__temp">10<span class="degree-char">°</span></span>
+                    <img class="current__weather-icon" src="http://openweathermap.org/img/wn/10d@4x.png"
+                        alt="icon that describes the weather">
+                    <ul class="current__weather-desc">
+                        <li class="general">OVERCAST</li>
+                        <li class="feels-like">FEELS LIKE:</li>
+                        <li class="wind">WIND:</li>
+                        <li class="humidity">HUMIDITY:</li>
+                    </ul>
+                </div>
+
+                <div class="forecast">
+                    <div class="card">
+                        <p class="card__week-day">MONDAY</p>
+                        <span class="card__temp">10°</span>
+                        <img class="card__weather-icon" src="http://openweathermap.org/img/wn/10d@4x.png"
+                            alt="icon that describes the weather">
+                    </div>
+                    <div class="card">
+                        <p class="card__week-day">MONDAY</p>
+                        <span class="card__temp">10°</span>
+                        <img class="card__weather-icon" src="http://openweathermap.org/img/wn/10d@4x.png"
+                            alt="icon that describes the weather">
+                    </div>
+                    <div class="card">
+                        <p class="card__week-day">MONDAY</p>
+                        <span class="card__temp">10°</span>
+                        <img class="card__weather-icon" src="http://openweathermap.org/img/wn/10d@4x.png"
+                            alt="icon that describes the weather">
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="location">
+
+                <div id="map" class="map"></div>
+
+                <div class="coordinate">
+                    <p class="coordinate__lat">Latitude: dwd de</p>
+                    <p class="coordinate__lng">Longitude:</p>
+                </div>
+
+            </section>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="google-translate.js"></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
